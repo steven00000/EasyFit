@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit - Programme Musculation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Exo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bienvenue sur EasyFit</h1>
+            <p>Choisis tes réponses pour ton programme personnalisé :</p>
+
+            <!-- Question 1 -->
+            <div class="question">
+                <h2>Comment te sens-tu pour cette séance ?</h2>
+                <button class="btn" onclick="setCondition('form')">En forme</button>
+                <button class="btn" onclick="setCondition('tired')">Fatigué</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="muscle-question" style="display: none;">
+                <h2>Quelle partie de muscles veux-tu travailler ?</h2>
+                <button class="btn" onclick="setMuscle('dos-epaules')">Dos / Épaules</button>
+                <button class="btn" onclick="setMuscle('biceps-avant-bras')">Biceps - Avant-bras</button>
+                <button class="btn" onclick="setMuscle('pecs-triceps')">Pecs - Triceps</button>
+                <button class="btn" onclick="setMuscle('autre')">Autre</button>
+            </div>
+
+            <!-- Question 3 - Choisir la séance -->
+            <div class="question" id="session-choice" style="display: none;">
+               <h2>Choisis ta séance :</h2>
+                <button class="btn" onclick="setSession('session-a')">Séance A</button>
+                <button class="btn" onclick="setSession('session-b')">Séance B</button>
+                <button class="btn" onclick="setSession('session-c')">Séance C</button>
+            </div>
+
+            
+
+            <!-- Programme de Séance -->
+            <div id="program" style="display: none;">
+                <h2>Programme de Séance</h2>
+                <div id="program-details"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
